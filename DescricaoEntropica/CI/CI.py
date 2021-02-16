@@ -6,9 +6,8 @@ np.set_printoptions(threshold=sys.maxsize)
 
 import itertools as itt
 
-#from src.visualize_2D import visualize_2D
 from src.main import fourier_motzkin_eliminate_single
-#from src.polytope import translate
+
 from src.redundancy_reduction import elimina_redundancia
 from desc_entro.desc_entro import desigualdades_basicas, cenario_marginal, cenario_marginal2, restricoes_lineares, monta_matriz
 
