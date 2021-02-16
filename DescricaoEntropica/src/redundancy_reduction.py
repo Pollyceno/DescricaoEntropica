@@ -14,7 +14,6 @@ import time
 
 def elimina_redundancia(A, B):
     print('Inicial:', len(A))
-
     A = np.unique(A, axis = 0)
     B = np.zeros((len(A)))
     #B = np.reshape(B, (len(B))) #Transpondo para o gurobi
