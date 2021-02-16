@@ -8,9 +8,8 @@ import gurobipy as gp
 
 import itertools as itt
 
-#from src.visualize_2D import visualize_2D
 from src.main import fourier_motzkin_eliminate_single#,project,convexhull
-#from src.polytope import translate
+
 
 
 def desigualdades_basicas(n, M = None):
