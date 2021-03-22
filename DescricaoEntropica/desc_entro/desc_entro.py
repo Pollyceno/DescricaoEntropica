@@ -1,15 +1,10 @@
-#import math
 import numpy as np
 import sys
 sys.path.append('..')
 np.set_printoptions(threshold=sys.maxsize)
 import gurobipy as gp
-#port time
-
 import itertools as itt
-
-from src.main import fourier_motzkin_eliminate_single#,project,convexhull
-
+from src.main import fourier_motzkin_eliminate_single
 
 
 def desigualdades_basicas(n, M = None):
