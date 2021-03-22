@@ -1,7 +1,6 @@
 import math
 import numpy as np
 
-
 def distribuicao(N):
 
 	if(N==2):
