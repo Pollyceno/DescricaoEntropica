@@ -27,7 +27,6 @@ def traduz(A, x, Ind=None, Ind_e=None):
 	for a in range(0,len(A)):
 		H[a] = [(A[a][i],comb[i]) for i in range(0,len(comb)) if A[a][i]!= 0.0]
 		H.append(h)
-	#print(tuple(H))
 
 	return H
 
