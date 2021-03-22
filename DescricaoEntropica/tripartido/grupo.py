@@ -100,7 +100,6 @@ def permuta(p):
         
         
         P = np.unique(P, axis = 0)
-        #print(pe)
         
     
     #print(P)
