@@ -125,10 +125,6 @@ def verifica_fronteira3(M, pabcDxyz):
 		Z0=I[11]
 		Z1=I[11]
 		
-		#pabcDxyz[ind322(a,b,c,x,y,0)]
-		#pabcDxyz[ind322(a,b,c,x,y,1)]
-		#Px0x1y0y1MxMyabcxyZ0[x0][x1][y0][y1][Mx][My][a][b][c][x][y][Z0] = px0x1y0y1[x0][x1][y0][y1]*pMxDax0[Mx][a][x0]*pMyDby0[My][b][y0]*pabcDxyz[a][b][c][x][y][0]*pxDx0x1[x][x0][x1]*pyDy0y1[y][y0][y1]*pz[0]*pZ0DcMxMy[Z0][c][Mx][My]/pz[0]
-		#Px0x1y0y1MxMyabcxyZ1[x0][x1][y0][y1][Mx][My][a][b][c][x][y][Z1] = px0x1y0y1[x0][x1][y0][y1]*pMxDax0[Mx][a][x0]*pMyDby0[My][b][y0]*pabcDxyz[a][b][c][x][y][1]*pxDx0x1[x][x0][x1]*pyDy0y1[y][y0][y1]*pz[1]*pZ1DcMxMy[Z1][c][Mx][My]/pz[1]
 		Px0x1y0y1MxMyabcxyZ0[x0][x1][y0][y1][Mx][My][a][b][c][x][y][Z0] = px0x1y0y1[x0][x1][y0][y1]*pMxDax0[Mx][a][x0]*pMyDby0[My][b][y0]*pabcDxyz[ind322(a,b,c,x,y,0)]*pxDx0x1[x][x0][x1]*pyDy0y1[y][y0][y1]*pz[0]*pZ0DcMxMy[Z0][c][Mx][My]/pz[0]
 		Px0x1y0y1MxMyabcxyZ1[x0][x1][y0][y1][Mx][My][a][b][c][x][y][Z1] = px0x1y0y1[x0][x1][y0][y1]*pMxDax0[Mx][a][x0]*pMyDby0[My][b][y0]*pabcDxyz[ind322(a,b,c,x,y,1)]*pxDx0x1[x][x0][x1]*pyDy0y1[y][y0][y1]*pz[1]*pZ1DcMxMy[Z1][c][Mx][My]/pz[1]
 
