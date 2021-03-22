@@ -1,13 +1,15 @@
 import numpy as np 
 
+# Given a numpy array (Ind) with all indexes to be eiminated and the inequalities matrix (A) for A*x <= b,  
+# return the index that number that appears least (var_index) and the set with the remaining indexes (restante).
+
 def w_variable(Ind, A):
-	print(Ind)
+
 	n_zeros = []
 	#Contagem de termos nao nulos
 	for i in Ind:
 		n_zeros = np.append(n_zeros, np.count_nonzero(A[:,i]))
 
-	print(n_zeros)
 
 	np.savetxt("nao_zeros.txt", [['restante: ', Ind],['Nao zeros: ',n_zeros]], fmt="%s")
 	
