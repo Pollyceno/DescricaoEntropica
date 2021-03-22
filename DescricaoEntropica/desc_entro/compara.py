@@ -59,6 +59,7 @@ def compara(verif, const): #Verifica quais desigualdades de verif NAO DECORREM d
             row = row + 1
     #print('Apos reducao:', len(verif))
     #Normalizando
+    
     B_verif = np.reshape(B_verif, (np.size(B_verif),1)) #Transpondo o vetor para poder entrar na funcaoourier Motzkin
     '''
     H_max=np.amax(abs(verif),axis=1)
