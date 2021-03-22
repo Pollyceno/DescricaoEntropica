@@ -1,6 +1,7 @@
 import math
 import numpy as np
 
+
 def ind322(a,b,c,x,y,z):
     # Behavior indices for 322 Bell scenario
     i=0
