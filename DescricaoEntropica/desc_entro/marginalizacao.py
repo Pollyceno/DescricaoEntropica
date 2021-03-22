@@ -10,7 +10,6 @@ def marginalizacao(P, marg):
 	
 	elim = np.delete(x, marg)
 	elim = np.sort(elim)[::-1].astype(int)
-	#print(elim)
 	
 	for i in elim:
 		P = P.sum(axis=i,dtype='float')
