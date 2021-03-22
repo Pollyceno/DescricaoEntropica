@@ -1,16 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Sep 10 13:52:06 2018
-
-@author: sadra
-"""
 import numpy as np
 import gurobipy as gp
-#import cvxpy as cp
-import time
+#import time
 import random
-
 
 
 def elimina(vetor_H, i, A, C, d, bound):
