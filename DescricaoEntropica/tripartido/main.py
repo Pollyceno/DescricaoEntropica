@@ -48,7 +48,6 @@ newrow=np.zeros(len(vetor_H), dtype='int')
 RIC = np.vstack([RIC, newrow])
 #RIC=np.array([newrow])
 
-#print(vetor_H)
 
 RIC[len(RIC)-1][vetor_H.index((0,1,2,3,8))] = 1
 RIC[len(RIC)-1][vetor_H.index((0,))] = -1
