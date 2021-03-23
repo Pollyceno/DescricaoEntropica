@@ -2,7 +2,6 @@ import random
 import math
 import numpy as np
 
-
 def multiplas(n):
 	pass
 	EM=np.arange(0., 1, 1/n)
