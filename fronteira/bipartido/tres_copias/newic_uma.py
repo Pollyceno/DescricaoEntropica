@@ -3,7 +3,6 @@ import math
 import numpy as np
 
 
-
 #------------FUNÇÃO QUE CALCULA A ENTROPIA------------------------------------------
 def H(prob):
 	S=np.size(prob)# Numero de elementos
