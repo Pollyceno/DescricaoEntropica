@@ -4,7 +4,6 @@ import numpy as np
 from marginalizacao import *
 
 
-
 #------------FUNÇÃO QUE CALCULA A ENTROPIA------------------------------------------
 def H(prob):
 	S=np.size(prob)# Numero de elementos
@@ -263,48 +262,7 @@ def verifica_fronteira1(f1, f2, f3, n):
 						h = np.concatenate((h, np.array([H(p)])))
 						#print(k,H(p),p)
 			
-			#print('Iz1g1',h[M.index((1,))]+h[M.index((4,))]-h[M.index((1,4))])
-			#print('Iz0g0',h[M.index((0,))]+h[M.index((3,))]-h[M.index((1,3))])
 			
-			#print('hm',h[M.index((2,))])
-			#print('Iz1g1m',h[M.index((1,))]+h[M.index((2,4))]-h[M.index((1,2,4))])
-			'''
-			print(h[M.index((1,))])
-			print(h[M.index((2,4))])
-			print(h[M.index((1,2,4))])
-			'''
-			#print('Iz0g0m',h[M.index((0,))]+h[M.index((2,3))]-h[M.index((0,2,3))])
-			#print('Iz1m',h[M.index((1,))]+h[M.index((2,))]-h[M.index((1,2))])
-			#print('Iz0m',h[M.index((0,))]+h[M.index((2,))]-h[M.index((0,2))])
-			'''
-			print(h[M.index((0,))])
-			print(h[M.index((2,3))])
-			print(h[M.index((0,2,3))])
-
-			
-			print('Iz0mDg0',h[M.index((0,3))]+h[M.index((2,3))]-h[M.index((3,))]-h[M.index((0,2,3))])
-			print('Iz0g0Dm',h[M.index((0,2))]+h[M.index((2,3))]-h[M.index((2,))]-h[M.index((0,2,3))])
-
-			print('Iz0z1',h[M.index((0,))]+h[M.index((1,))]-h[M.index((0,1))])
-			print('Iz0z1Dmg1',h[M.index((0,2,4))]+h[M.index((1,2,4))]-h[M.index((2,4))]-h[M.index((0,1,2,4))])
-			'''
-			'''
-			print('Hz0g0',h[M.index((0,3))])
-			print('Hmg0',h[M.index((2,3))])
-			print('Hg0',h[M.index((3,))])
-			print('Hz0mg0',h[M.index((0,2,3))])
-			print('Hz0m',h[M.index((0,2))])
-			print('Hm',h[M.index((2,))])
-			'''
-			#return h, M
-			#print('pz0mg0',marginalizacao(Pz0z1mg0, (0,2,3)))
-			#print('pz0g0',marginalizacao(Pz0z1mg0, (0,3)))
-			#print('pz0m',marginalizacao(Pz0z1mg0, (0,2)))
-
-			#print('pz1mg1',marginalizacao(Pz0z1mg1, (1,2,3)))
-
-			
-
 			#-------------VERIFICANDO DESIGUALDADE-------------------------------------------------------
 			#desig = (-H(pm)+ H(pz0z1)+H(pmg0)-H(pz0mg0)+H(pz0mg1)-H(pz0z1mg1))
 			#desig = (-h[M.index((2,))]+h[M.index((0,1))]+h[M.index((2,3))]-h[M.index((0,2,3))]+h[M.index((0,2,4))]-h[M.index((0,1,2,4))])
