@@ -74,7 +74,7 @@ for k in range(0,len(F)):
 ###########################################################################################################################
 			# FRONTEIRA COM O PROTOCOLO ANTIGO
 ###########################################################################################################################
-
+'''
 #(E, G) = verifica_fronteira(F[10],F[10],F[10], n,1)
 #(E, G) = verifica_fronteira(F[7],F[10],F[5], n,1)
 (E, G) = verifica_fronteira2(F[10],F[10],F[10], n)
@@ -128,9 +128,9 @@ for i in range(0,l):
 	for j in range(0,l):
 		for k in range(0,l):
 
-			i=7
-			j=7
-			k=7
+			#i=7
+			#j=7
+			#k=7
 			(E2, G2) = verifica_fronteira2(F[i],F[j],F[k], n)
 			#(E2, G2) = verifica_fronteira(F[10],F[10],F[10], n)
 			#(E2, G2) = verifica_fronteira(F[7],F[7],F[7], n)
@@ -172,16 +172,5 @@ for i in range(0,l):
 			plt.savefig(nome, dots=100)
 			plt.close(fig)
 			
-'''
-###########################################################################################################################
-			# FRONTEIRAS COM NOVOS PROTOCOLOS
-###########################################################################################################################
-'''
-for a in range(0,2):
-	for z0 in range(0,2):
-		for m in range(0,2):
-			for b in range(0,2):
-				for g in range(0,2):
-					print('a:',a,' z0:', z0, ' m:', m, 'p(m) = ', F[0][m][a][z0], ' m:', m,' b:',b, ' g:',g, 'p(g) = ', F[0][g][m][b])
 
-'''
+
