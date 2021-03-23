@@ -4,7 +4,6 @@ import numpy as np
 from marginalizacao import *
 
 
-
 #------------FUNÇÃO QUE CALCULA A ENTROPIA------------------------------------------
 def H(prob):
 	S=np.size(prob)# Numero de elementos
