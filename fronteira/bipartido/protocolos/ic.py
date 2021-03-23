@@ -3,8 +3,6 @@ import math
 import numpy as np
 from marginalizacao import *
 
-
-
 #------------FUNÇÃO QUE CALCULA A ENTROPIA------------------------------------------
 def H(prob):
 	S=np.size(prob)# Numero de elementos
@@ -240,19 +238,8 @@ def verifica_fronteira2(f1, f2, f3, n):
 			#Maginalizando o que nao faz parte do protocolo	
 			Pz0z1mg0 = marginalizacao(Pz0z1abxmg0, (0,1,5,6))
 			Pz0z1mg1 = marginalizacao(Pz0z1abxmg1, (0,1,5,6))
-			'''
-			pz1 = marginalizacao(Pz0z1mg1, (1))
-			pg1 = marginalizacao(Pz0z1mg1, (3))
-			pz1g1 = marginalizacao(Pz0z1mg1, (1,3))
-		
-			print(IM(pz1, pg1, pz1g1))
-		
-			pmg1 = marginalizacao(Pz0z1mg1, (2,3))
-			pz1mg1 = marginalizacao(Pz0z1mg1, (1,2,3))
-		
-			print(IM(pz1, pmg1, pz1mg1))
-			'''
-			#Gerando lista com todas as marginais sem m
+			
+						#Gerando lista com todas as marginais sem m
 			CM = np.array([[0,1,2,3],[0,1,2,4]]) #Cenario marginal
 			(M,Ind)=cenario_marginal(CM, 6)
 			
@@ -286,82 +273,7 @@ def verifica_fronteira2(f1, f2, f3, n):
 						h = np.concatenate((h, np.array([H(p)])))
 						#print(k,H(p),p)
 			
-			#print('Iz1g1',h[M.index((1,))]+h[M.index((4,))]-h[M.index((1,4))])
-			#print('Iz0g0',h[M.index((0,))]+h[M.index((3,))]-h[M.index((1,3))])
 			
-			#print('hm',h[M.index((2,))])
-			#print('Iz1g1m',h[M.index((1,))]+h[M.index((2,4))]-h[M.index((1,2,4))])
-			'''
-			print(h[M.index((1,))])
-			print(h[M.index((2,4))])
-			print(h[M.index((1,2,4))])
-			'''
-			#print('Iz0g0m',h[M.index((0,))]+h[M.index((2,3))]-h[M.index((0,2,3))])
-			#print('Iz1m',h[M.index((1,))]+h[M.index((2,))]-h[M.index((1,2))])
-			#print('Iz0m',h[M.index((0,))]+h[M.index((2,))]-h[M.index((0,2))])
-			'''
-			print(h[M.index((0,))])
-			print(h[M.index((2,3))])
-			print(h[M.index((0,2,3))])
-
-			
-			print('Iz0mDg0',h[M.index((0,3))]+h[M.index((2,3))]-h[M.index((3,))]-h[M.index((0,2,3))])
-			print('Iz0g0Dm',h[M.index((0,2))]+h[M.index((2,3))]-h[M.index((2,))]-h[M.index((0,2,3))])
-
-			print('Iz0z1',h[M.index((0,))]+h[M.index((1,))]-h[M.index((0,1))])
-			print('Iz0z1Dmg1',h[M.index((0,2,4))]+h[M.index((1,2,4))]-h[M.index((2,4))]-h[M.index((0,1,2,4))])
-			'''
-			'''
-			print('Hz0g0',h[M.index((0,3))])
-			print('Hmg0',h[M.index((2,3))])
-			print('Hg0',h[M.index((3,))])
-			print('Hz0mg0',h[M.index((0,2,3))])
-			print('Hz0m',h[M.index((0,2))])
-			print('Hm',h[M.index((2,))])
-			'''
-			#return h, M
-			'''
-			pz0mg0 = marginalizacao(Pz0z1mg0, (0,2,3))
-			pz1mg1 = marginalizacao(Pz0z1mg1, (1,2,3))
-			#print('pz0mg0',marginalizacao(Pz0z1mg0, (0,2,3)))
-			#print('pz0g0',marginalizacao(Pz0z1mg0, (0,3)))
-			#print('pz0m',marginalizacao(Pz0z1mg0, (0,2)))
-
-			#print('pz1mg1',marginalizacao(Pz0z1mg1, (1,2,3)))
-
-			print('z0','&' , 'm','&', 'g0','&', 'p','\\')
-			N = 3
-			for k in range(0,(2**N)):
-				k = np.binary_repr(k)
-				I = np.zeros((N-len(k)), dtype = 'int')
-				for l in range(0,len(k)):
-					I = np.hstack((I,int(k[l])))
-				#print(I)
-		
-				z0=I[0]
-				m=I[1]
-				g0=I[2]
-
-				print(z0,'&' , m,'&', g0,'&', pz0mg0[z0][m][g0],'\\')
-
-			print('\n')
-
-			print('z1','&' , 'm','&', 'g1','&', 'p','\\')
-			N = 3
-			for k in range(0,(2**N)):
-				k = np.binary_repr(k)
-				I = np.zeros((N-len(k)), dtype = 'int')
-				for l in range(0,len(k)):
-					I = np.hstack((I,int(k[l])))
-				#print(I)
-		
-				z1=I[0]
-				m=I[1]
-				g1=I[2]
-
-				print(z1,'&' , m,'&', g1,'&', pz1mg1[z1][m][g1],'\\')
-
-			'''
 
 			#-------------VERIFICANDO DESIGUALDADE-------------------------------------------------------
 			#desig = (-H(pm)+ H(pz0z1)+H(pmg0)-H(pz0mg0)+H(pz0mg1)-H(pz0z1mg1))
