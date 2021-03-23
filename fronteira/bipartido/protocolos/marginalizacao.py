@@ -3,7 +3,6 @@ import math
 import numpy as np
 import itertools as itt
 
-
 def marginalizacao(P, marg):
 	n =P.ndim
 	x=np.arange(n)
